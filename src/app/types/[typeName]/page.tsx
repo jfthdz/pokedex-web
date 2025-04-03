@@ -1,5 +1,4 @@
 import { fetchPokemonByType } from "@/lib/fetch-pokemon-by-type";
-import PokemonCard from "@/app/components/PokemonCard";
 import { TypePageProps } from "@/types/type-page";
 import PokemonGrid from "@/app/components/PokemonsGrid";
 
