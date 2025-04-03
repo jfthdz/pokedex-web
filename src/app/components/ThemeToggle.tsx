@@ -18,22 +18,38 @@ export default function ThemeToggle() {
   }, []);
 
   const toggleTheme = () => {
-    const isDark = document.documentElement.classList.toggle("dark");
+    const html = document.documentElement;
+    const isDark = html.classList.toggle("dark");
     const body = document.getElementById("app-body");
     const header = document.getElementById("main-header");
 
-    body?.classList.toggle("bg-white");
-    body?.classList.toggle("bg-slate-900");
+    if (darkMode) {
+      console.log("light");
+      body?.classList.remove("bg-slate-900", "text-white");
+      body?.classList.remove("dark:text-white", "dark:bg-slate-900");
 
-    body?.classList.toggle("text-black");
-    body?.classList.toggle("text-white");
+      header?.classList.remove("dark:bg-slate-950");
+      header?.classList.remove("bg-slate-950");
 
-    header?.classList.toggle("bg-red-500");
-    header?.classList.toggle("bg-slate-950");
+      header?.classList.add("bg-red-500");
+    } else {
+      console.log("dark");
+
+      body?.classList.toggle("dark:bg-slate-900");
+      body?.classList.toggle("dark:text-white");
+      body?.classList.remove("bg-white", "text-black");
+
+      body?.classList.add("bg-slate-900", "text-white");
+
+      header?.classList.toggle("dark:bg-slate-950");
+      header?.classList.remove("bg-red-500");
+      header?.classList.add("bg-slate-950");
+    }
 
     setDarkMode(isDark);
     localStorage.setItem("theme", isDark ? "dark" : "light");
   };
+
   return (
     <button
       onClick={toggleTheme}

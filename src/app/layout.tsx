@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en" className={`${pressStart.className}`}>
       <body
         id="app-body"
-        className="bg-white text-gray-900 dark:bg-slate-900 dark:text-white transition-colors duration-300"
+        className="bg-white text-black dark:bg-slate-900 dark:text-white transition-colors duration-300"
       >
         <Header />
         <main className="max-w-5xl mx-auto px-4 py-8 transition-colors duration-300">
