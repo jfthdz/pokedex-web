@@ -42,24 +42,28 @@ Desarrollada con Next.js 15, TailwindCSS, y la PokéAPI.
 💡 Modo claro y oscuro
 
 - Claro
+
   ![](./public/assets/screenshots/light.PNG)
 
 - Oscuro
+
   ![](./public/assets/screenshots/dark.PNG)
 
 📱 Vista movil / IPad
 
 - Movil
+
   ![](./public/assets/screenshots/movil.PNG)
 
 - IPad
+
   ![](./public/assets/screenshots/ipad.PNG)
 
 ## 🚀 Deploy
 
 La app está publicada en Vercel y podés probarla aquí:
 
-🔗 https://pokedex-web.vercel.app
+🔗 https://pokedex-nine-silk.vercel.app
 
 ## 🧑‍💻 Instalación local
 
@@ -74,6 +78,7 @@ La app está publicada en Vercel y podés probarla aquí:
 ## 📁 Estructura del proyecto
 
 .
+
 ├── public/assets # Íconos, imagenes de tipos de Pokémon
 
 ├── src/app # Rutas y páginas principales
