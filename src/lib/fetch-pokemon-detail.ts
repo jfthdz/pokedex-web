@@ -9,13 +9,17 @@ export async function fetchPokemonDetail(
   return {
     name: data.name,
     image: data.sprites.other["official-artwork"].front_default,
-    abilities: data.abilities.map((a: any) => a.ability.name),
-    types: data.types.map((t: any) => t.type.name),
+    abilities: data.abilities.map(
+      (a: { ability: { name: string } }) => a.ability.name
+    ),
+    types: data.types.map((t: { type: { name: string } }) => t.type.name),
     height: data.height,
     weight: data.weight,
-    stats: data.stats.map((s: any) => ({
-      name: s.stat.name,
-      value: s.base_stat,
-    })),
+    stats: data.stats.map(
+      (s: { stat: { name: string }; base_stat: number }) => ({
+        name: s.stat.name,
+        value: s.base_stat,
+      })
+    ),
   };
 }
