@@ -6,16 +6,9 @@ export default function ThemeToggle() {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    const storedTheme = localStorage.getItem("theme");
+    const theme = localStorage.getItem("theme");
 
-    if (!storedTheme) {
-      const prefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)"
-      ).matches;
-      localStorage.setItem("theme", prefersDark ? "dark" : "light");
-    }
-
-    if (localStorage.getItem("theme") === "dark") {
+    if (theme === "dark") {
       document.documentElement.classList.add("dark");
       setDarkMode(true);
     } else {
@@ -25,23 +18,18 @@ export default function ThemeToggle() {
   }, []);
 
   const toggleTheme = () => {
-    const isDark = document.documentElement.classList.toggle("dark");
-    const body = document.getElementById("app-body");
-    const header = document.getElementById("main-header");
-
-    body?.classList.toggle("bg-white");
-    body?.classList.toggle("bg-slate-900");
-
-    body?.classList.toggle("text-black");
-    body?.classList.toggle("text-white");
-
-    header?.classList.toggle("bg-red-500");
-    header?.classList.toggle("bg-slate-950");
-
+    const isDark = !darkMode;
     setDarkMode(isDark);
-    console.log(isDark);
+
     localStorage.setItem("theme", isDark ? "dark" : "light");
+
+    if (isDark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
   };
+
   return (
     <button
       onClick={toggleTheme}
