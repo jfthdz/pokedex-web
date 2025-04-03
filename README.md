@@ -37,21 +37,21 @@ Desarrollada con Next.js 15, TailwindCSS, y la PokéAPI.
 ## 📸 Capturas
 
 - Vista por tipos
-  ![Pokédex tipos](./public/assets/screenshots/porTipo.png)
+  ![Pokédex tipos](./public/assets/screenshots/porTipo.PNG)
 
 💡 Modo claro y oscuro
 
 - Claro
-  ![](./public/assets/screenshots/light.png)
+  ![](./public/assets/screenshots/light.PNG)
 
 - Oscuro
-  ![](./public/assets/screenshots/dark.png)
+  ![](./public/assets/screenshots/dark.PNG)
 
 📱 Vista movil / IPad
 
-![](./public/assets/screenshots/movil.png)
+![](./public/assets/screenshots/movil.PNG)
 
-![](./public/assets/screenshots/ipad.png)
+![](./public/assets/screenshots/ipad.PNG)
 
 ## 🚀 Deploy
 
