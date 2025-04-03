@@ -18,18 +18,22 @@ export default function ThemeToggle() {
   }, []);
 
   const toggleTheme = () => {
-    const isDark = !darkMode;
+    const isDark = document.documentElement.classList.toggle("dark");
+    const body = document.getElementById("app-body");
+    const header = document.getElementById("main-header");
+
+    body?.classList.toggle("bg-white");
+    body?.classList.toggle("bg-slate-900");
+
+    body?.classList.toggle("text-black");
+    body?.classList.toggle("text-white");
+
+    header?.classList.toggle("bg-red-500");
+    header?.classList.toggle("bg-slate-950");
+
     setDarkMode(isDark);
-
     localStorage.setItem("theme", isDark ? "dark" : "light");
-
-    if (isDark) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
   };
-
   return (
     <button
       onClick={toggleTheme}
