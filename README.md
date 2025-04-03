@@ -49,9 +49,11 @@ Desarrollada con Next.js 15, TailwindCSS, y la PokéAPI.
 
 📱 Vista movil / IPad
 
-![](./public/assets/screenshots/movil.PNG)
+- Movil
+  ![](./public/assets/screenshots/movil.PNG)
 
-![](./public/assets/screenshots/ipad.PNG)
+- IPad
+  ![](./public/assets/screenshots/ipad.PNG)
 
 ## 🚀 Deploy
 
@@ -61,19 +63,27 @@ La app está publicada en Vercel y podés probarla aquí:
 
 ## 🧑‍💻 Instalación local
 
-git clone https://github.com/jfthdz/pokedex-web.git
-cd pokedex-web
-npm install
-npm run dev
+- git clone https://github.com/jfthdz/pokedex-web.git
+
+- cd pokedex-web
+
+- npm install
+
+- npm run dev
 
 ## 📁 Estructura del proyecto
 
 .
 ├── public/assets # Íconos, imagenes de tipos de Pokémon
+
 ├── src/app # Rutas y páginas principales
+
 ├── src/components # Componentes UI como Card, Modal, Header
+
 ├── src/lib # Funciones para llamadas a la API (fetch)
+
 ├── src/types # Interfaces TypeScript
 
-✍️ Autor
+## Autor
+
 Desarrollado por Jafet Hernández A. | Full Stack Developer.
