@@ -3,7 +3,8 @@ import { TypePageProps } from "@/types/type-page";
 import PokemonGrid from "@/app/components/PokemonsGrid";
 
 export default async function TypePage({ params }: TypePageProps) {
-  const { typeName } = await params;
+  const awaitedParams = await params;
+  const { typeName } = awaitedParams;
   const pokemons = await fetchPokemonByType(typeName);
 
   return (
