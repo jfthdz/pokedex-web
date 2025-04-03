@@ -13,7 +13,9 @@ export async function fetchPokemonByType(typeName: string) {
       const detailsRes = await fetch(url);
       const details = await detailsRes.json();
 
-      const types = details.types.map((t: any) => t.type.name);
+      const types = details.types.map(
+        (t: { type: { name: string } }) => t.type.name
+      );
 
       return { name, url, types };
     })
