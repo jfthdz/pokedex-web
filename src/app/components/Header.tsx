@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header
       id="main-header"
-      className="flex justify-center bg-red-500 text-white py-4 shadow-md transition-colors duration-300"
+      className="flex justify-center bg-red-500 dark:bg-slate-950 text-white py-4 shadow-md transition-colors duration-300"
     >
       <div className="mx-auto px-4 flex justify-center items-center">
         <Link href="/" className="flex gap-4 items-center">
