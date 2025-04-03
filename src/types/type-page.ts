@@ -1,3 +1,3 @@
 export interface TypePageProps {
-  params: { typeName: string };
+  params: Promise<{ typeName: string }>;
 }
